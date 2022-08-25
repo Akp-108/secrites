@@ -17,6 +17,8 @@ jobs:
         
       - name: Run a one-line script
         run: echo this is the one line script
+      - name: Run a one-line script
+        run: echo ${{ secrets.NAME }}
       
       - name: Run a multi-line script
         run: |
