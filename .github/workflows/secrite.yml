@@ -1,0 +1,26 @@
+name: This is manual run 
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master"]
+  
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        
+      - name: Run a one-line script
+        run: echo this is the one line script
+      
+      - name: Run a multi-line script
+        run: |
+          echo this is first line of script
+          echo this is the second line of script
+
+
